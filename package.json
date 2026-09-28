@@ -1,0 +1,41 @@
+{
+  "name": "lici-tu-bep-inox",
+  "version": "13.1.0",
+  "description": "Phan mem tinh gia thanh va bao gia tu bep inox LICI",
+  "main": "main.js",
+  "author": "Tran Viet Cuong",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.lici.tubep",
+    "productName": "Tu Bep Inox LICI",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "app/**/*"
+    ],
+    "win": {
+      "target": [
+        { "target": "nsis", "arch": ["x64"] },
+        { "target": "portable", "arch": ["x64"] }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Tu Bep Inox LICI"
+    }
+  }
+}
