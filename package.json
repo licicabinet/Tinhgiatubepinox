@@ -10,18 +10,16 @@
     "build": "electron-builder --win --x64"
   },
   "devDependencies": {
-    "electron": "^28.0.0",
-    "electron-builder": "^24.9.1"
+    "electron": "^28.3.3",
+    "electron-builder": "^24.13.3"
   },
- "build": {
-  "appId": "com.lici.tubep",
-  "productName": "Tu Bep Inox LICI",
-  "asar": false,
-  "directories": {
-    "output": "dist"
-  },
-  ...
-}
+  "build": {
+    "appId": "com.lici.tubep",
+    "productName": "Tu Bep Inox LICI",
+    "asar": false,
+    "directories": {
+      "output": "dist"
+    },
     "files": [
       "main.js",
       "preload.js",
@@ -29,8 +27,7 @@
     ],
     "win": {
       "target": [
-        { "target": "nsis", "arch": ["x64"] },
-        { "target": "portable", "arch": ["x64"] }
+        { "target": "nsis", "arch": ["x64"] }
       ]
     },
     "nsis": {
