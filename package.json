@@ -20,10 +20,10 @@
     "directories": {
       "output": "dist"
     },
-    "files": [
+        "files": [
       "main.js",
       "preload.js",
-      "app/**/*"
+      "index.html"
     ],
     "win": {
       "target": [
