@@ -13,12 +13,15 @@
     "electron": "^28.0.0",
     "electron-builder": "^24.9.1"
   },
-  "build": {
-    "appId": "com.lici.tubep",
-    "productName": "Tu Bep Inox LICI",
-    "directories": {
-      "output": "dist"
-    },
+ "build": {
+  "appId": "com.lici.tubep",
+  "productName": "Tu Bep Inox LICI",
+  "asar": false,
+  "directories": {
+    "output": "dist"
+  },
+  ...
+}
     "files": [
       "main.js",
       "preload.js",
