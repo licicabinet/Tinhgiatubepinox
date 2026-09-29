@@ -25,14 +25,13 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload Setup EXE
+      - name: List built files
+        run: dir dist
+        continue-on-error: true
+
+      - name: Upload EXE
         uses: actions/upload-artifact@v4
         with:
           name: LICI-Setup-Installer
-          path: dist/*Setup*.exe
-
-      - name: Upload Portable EXE
-        uses: actions/upload-artifact@v4
-        with:
-          name: LICI-Portable
-          path: dist/*portable*.exe
+          path: dist/*.exe
+          if-no-files-found: warn
